@@ -1,46 +1,25 @@
 # ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-## Template Instructions
+## Business Overview
+The primary objective of this project is to develop a data-driven web application that enables the client to accurately predict house sale prices based on various house attributes and provides insightful visualizations of how these attributes correlate with sale prices. This will aid the client in making informed decisions regarding the sale of four inherited properties and any future real estate investments in Ames, Iowa.
 
-Welcome,
+## Business Requirements
 
-This is the Code Institute student template for the Heritage Housing project option in Predictive Analytics. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
+- Data Visualization Requirement: <br>
+    The client requires a dashboard that displays visualizations of house attributes correlated with sale prices to understand market trends and factors influencing house values in Ames, Iowa.
 
-You can safely delete the Template Instructions section of this README.md file,  and modify the remaining paragraphs for your own project. Please do read the Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use.
+- Predictive Analysis Requirement: <br>
+    The client needs a robust predictive model integrated within the dashboard that can forecast the sale prices of her four inherited houses and any additional houses in Ames. <br>This model should use historical data and house attributes to generate predictions.
 
-## How to use this repo
+### Succes Metrics
+**Model Performance:** <br>
+    Achievement of an R2 score of at least 0.75 on both the training and testing datasets, indicating strong predictive accuracy of the model.
 
-1. Use this template to create your GitHub project repo
+**Variable Correlation Analysis:** <br>
+    Completion of a comprehensive study identifying and visualizing the most relevant variables that are correlated with the sale price. This includes clear documentation and presentations of these correlations through the dashboard to aid in understanding how different house attributes impact sale prices in Ames, Iowa.
 
-2. Log into the cloud-based IDE with your GitHub account.
-
-3. On your Dashboard, click on the Create button
-
-4. Paste in the URL you copied from GitHub earlier
-
-5. Click Create
-
-6. Wait for the workspace to open. This can take a few minutes.
-
-7. Open a new terminal and `pip3 install -r requirements.txt`
-
-11. Open the jupyter_notebooks directory and click on the notebook you want to open.
-
-12. Click the kernel button and choose Python Environments.
-
-Note that the kernel says Python 3.8.18 as it inherits from the workspace so it will be Python-3.8.18 as installed by our template. To confirm this you can use `! python --version` in a notebook code cell.
-
-## Cloud IDE Reminders
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In your Cloud IDE, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with *Regenerate API Key*.
+**Predictive Capability:** <br>
+    Successful implementation of the predictive model within the dashboard that can accurately forecast sale prices for the four inherited properties, as well as for any other house in Ames. The predictions should consistently align with actual market prices, demonstrating the model's effectiveness.
 
 ## Dataset Content
 
