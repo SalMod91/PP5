@@ -1,6 +1,7 @@
 import streamlit as st
 from app_pages.multi_page import MultiPage
 from app_pages.page_1_summary import page_1_summary_body
+from app_pages.page_2_sale_price_study import page_2_sale_price_study_body
 
 app = MultiPage(app_name= "Temporary Name")
 
@@ -19,5 +20,6 @@ st.error("* This is made with st.error()") # Display a text with error style.
 st.write("---")  # creates a horizontal line, useful to separate the content in the page
 
 app.app_page("Quick Project Summary", page_1_summary_body)
+app.app_page("Sale Price Study", page_2_sale_price_study_body)
 
 app.run()
