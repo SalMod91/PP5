@@ -1,4 +1,5 @@
 import streamlit as st
+from app_pages.multi_page import MultiPage
 
 st.write("Hello World")
 st.write("This is a test to see if Streamlit works correctly")
