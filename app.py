@@ -2,6 +2,7 @@ import streamlit as st
 from app_pages.multi_page import MultiPage
 from app_pages.page_1_summary import page_1_summary_body
 from app_pages.page_2_sale_price_study import page_2_sale_price_study_body
+from app_pages.page_3_sale_price_prediction import page_3_sale_price_prediction_body
 
 app = MultiPage(app_name= "Temporary Name")
 
@@ -21,5 +22,6 @@ st.write("---")  # creates a horizontal line, useful to separate the content in 
 
 app.app_page("Quick Project Summary", page_1_summary_body)
 app.app_page("Sale Price Study", page_2_sale_price_study_body)
+app.app_page("Sale Price Prediction", page_3_sale_price_prediction_body)
 
 app.run()
