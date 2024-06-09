@@ -1,5 +1,8 @@
 import streamlit as st
 from app_pages.multi_page import MultiPage
+from app_pages.page_1_summary import page_1_summary_body
+
+app = MultiPage(app_name= "Temporary Name")
 
 st.write("Hello World")
 st.write("This is a test to see if Streamlit works correctly")
@@ -14,3 +17,7 @@ st.success("* This is made with st.success()") # Display a text with success sty
 st.warning("* This is made with st.warning()") # Display a text with warning style.
 st.error("* This is made with st.error()") # Display a text with error style.
 st.write("---")  # creates a horizontal line, useful to separate the content in the page
+
+app.app_page("Quick Project Summary", page_1_summary_body)
+
+app.run()

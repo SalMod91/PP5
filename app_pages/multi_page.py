@@ -1,5 +1,6 @@
 import streamlit as st
-from app_pages.multi_page import MultiPage
+
+from app_pages.page_1_summary import page_1_summary_body
 
 
 class MultiPage:
@@ -18,7 +19,7 @@ class MultiPage:
     
     def app_page(self, title, func) -> None:
         """ Appends title"""
-        self.pages.append({"title":title, "function": func})
+        self.pages.append({"title": title, "function": func})
     
     def run(self):
         """Set title and menu names"""
