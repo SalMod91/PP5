@@ -76,8 +76,42 @@ Although your friend has an excellent understanding of property prices in her ow
 
 ## Dashboard Design
 
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items that your dashboard library supports.
-* Eventually, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
+### Dashboard Expectations
+The dashboard should contain:
+
+- A project summary page, showing the project dataset summary and the client's requirements.
+- A page listing findings related to which features have the strongest correlation to the house sale price.
+- A page displaying the 4 houses attributes and their respective predicted sale price.
+- It should display a message informing the summed predicted price for all 4 inherited houses.
+- It should have an interactive input widget that allows a user to provide real-time house data to predict the sale price.
+- A page indicating the project hypothesis(es) and how i validated it across the project.
+- A technical page displaying the model's performance.
+
+### Page 1: Project summary
+
+**Quick project summary**:
+- Project Terms and Jargon
+- Describe Project Dataset
+- State Business Requirements
+
+### Page 2: Sale Price Study
+
+- This page will answer business requirement 1
+- Display the most correlated variables to Sale Price
+- Explain correlation study
+- Visualize Data
+
+### Page 3: Sale Price Prediction
+- This page will answer business requirement 2
+- Display the predicted Price of all 4 inherited houses
+- Widget to input real life data and predict sale price
+
+### Page 4: Project Hypothesis and Validation
+
+### Page 5: Machine Learning Model
+- Overview of the machine learning pipeline implemented for model training
+- Details on the significance of various features within the model
+- Analysis of the pipeline’s performance
 
 ## Unfixed Bugs
 
