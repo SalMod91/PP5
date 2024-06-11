@@ -1,7 +1,5 @@
 import streamlit as st
 
-from app_pages.page_1_summary import page_1_summary_body
-
 
 class MultiPage:
     """
