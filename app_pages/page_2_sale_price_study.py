@@ -217,7 +217,30 @@ def page_2_sale_price_study_body():
     if st.checkbox("PPS"):
         calculate_pps(df)
 
+    st.write(
+        """
+        ## Bivariate Analysis
 
+        Bivariate analysis involves examining the relationships between two variables. 
+        To better understand the positive relationships between features most correlated 
+        with the sale price, we will utilize regression plots. 
+        """
+    )
+    
+    st.info(
+        """
+        **About Regression Plots**:
+        Regression plots show the relationship between two variables with data points and a line of best fit. 
+        This line helps us see the trend and understand how changes in one variable could influence the other. 
+        They are especially useful for seeing how features linked to sale price impact its values.
+        """
+    )
+
+    if st.checkbox("Bivariate Analysis"):
+        plot_regression(df, variables_to_study)
+
+
+# Section for functions
 def heatmap_corr(df, threshold, figsize=(20,12), font_annot=8):
     """
     Generates a heatmap to visualize the correlations of the DataFrame.
@@ -298,3 +321,18 @@ def plot_correlation_bar(df, method='pearson'):
     plt.ylabel('Features')
     
     st.pyplot(plt)
+
+def plot_regression(df, variables_to_study):
+    """
+    Plots regression plots for specified variables against the Sale Price
+    """
+    for variable, unit in variables_to_study.items():
+        plt.figure(figsize=(10, 6))
+        sns.regplot(x=variable, y='SalePrice', data=df, line_kws={"color": "red"}, ci=None)
+        sns.set_style("whitegrid")
+        plt.title(f'Sale Price vs. {variable}')
+        plt.xlabel(f'{variable} ({unit})')
+        plt.ylabel('Sale Price ($)')
+        plt.grid(True)
+
+        st.pyplot(plt)
