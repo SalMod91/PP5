@@ -26,6 +26,16 @@ def page_3_sale_price_prediction_body():
         "inherited houses and any other house in Ames, Iowa."
     )
 
+    st.info(
+        "The price prediction is based on five key property features, which clients "
+        "can input using the selections below. These features have been determined "
+        "by the machine learning model as the most effective for predicting sale "
+        "prices. They may vary slightly from those identified as most correlated "
+        "in the initial data analysis. This variation occurs because the model "
+        "conducts a more complex analysis to determine the optimal variables for "
+        "accurately forecasting the sale price."
+    )
+
     # Generate live input data using widgets
     X_live = DrawInputsWidgets()
 
