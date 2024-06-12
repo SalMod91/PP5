@@ -166,6 +166,7 @@ def page_2_sale_price_study_body():
         calculate_corr_pearson(df)
         plot_correlation_bar(df, method="pearson")
 
+    st.write("---")
 
     # Spearman correlation explanation and visualization
     st.info(
@@ -189,6 +190,8 @@ def page_2_sale_price_study_body():
         calculate_corr_spearman(df)
         plot_correlation_bar(df, method="spearman")
     
+    st.write("---")
+
     # PPS heatmap explanation and visualization
     st.info(
         "### Predictive Power Score (PPS) Heatmap\n"
@@ -216,6 +219,8 @@ def page_2_sale_price_study_body():
     # Checkbox to view PPS
     if st.checkbox("PPS"):
         calculate_pps(df)
+
+    st.write("---")
 
     st.write(
         """

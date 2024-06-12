@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 from datetime import date
 from src.data_management import load_pkl_file, load_house_data
+from src.machine_learning.predictive_analysis_ui import predict_sale_price
 
 def page_3_sale_price_prediction_body():
     """
@@ -28,6 +29,12 @@ def page_3_sale_price_prediction_body():
     # Generate live input data using widgets
     X_live = DrawInputsWidgets()
 
+    # Predict live data
+    if st.button("Run Predictive Analysis"): 
+        prediction = predict_sale_price(X_live, sale_price_features, sale_price_pipeline)
+        st.write(f"Estimated Sale Price: **${prediction:,}**")
+    
+    st.write("---")
 
 def DrawInputsWidgets():
     """
