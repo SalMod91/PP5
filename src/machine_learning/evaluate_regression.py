@@ -9,7 +9,8 @@ from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
 def regression_performance(X_train, y_train, X_test, y_test, pipeline):
     """
-    Display regression model performance metrics for both training and test datasets.
+    Display regression model performance metrics for
+    both training and test datasets.
     """
     st.write("## Model Evaluation")
 
@@ -26,14 +27,22 @@ def regression_evaluation(X, y, pipeline):
     """
     prediction = pipeline.predict(X)
     st.write(f'R2 Score: {r2_score(y, prediction).round(3)}')
-    st.write(f'Mean Absolute Error: {mean_absolute_error(y, prediction).round(3)}')
-    st.write(f'Mean Squared Error: {mean_squared_error(y, prediction).round(3)}')
-    st.write(f'Root Mean Squared Error: {np.sqrt(mean_squared_error(y, prediction)).round(3)}')
+    st.write(
+        f'Mean Absolute Error: {mean_absolute_error(y, prediction).round(3)}'
+    )
+    st.write(
+        f'Mean Squared Error: {mean_squared_error(y, prediction).round(3)}'
+    )
+    st.write(
+        f'Root Mean Squared Error: '
+        f'{np.sqrt(mean_squared_error(y, prediction)).round(3)}')
 
 
-def regression_evaluation_plots(X_train, y_train, X_test, y_test, pipeline, alpha_scatter=0.5):
+def regression_evaluation_plots(X_train, y_train, X_test,
+                                y_test, pipeline, alpha_scatter=0.5):
     """
-    Generate scatter plots comparing actual and predicted values for both training and test sets.
+    Generate scatter plots comparing actual and predicted values for
+    both training and test sets.
     """
     pred_train = pipeline.predict(X_train)
     pred_test = pipeline.predict(X_test)

@@ -14,11 +14,11 @@ class MultiPage:
             page_title=self.app_name,
             page_icon="🖥️"
         )
-    
+
     def app_page(self, title, func) -> None:
         """ Appends title"""
         self.pages.append({"title": title, "function": func})
-    
+
     def run(self):
         """Set title and menu names"""
         st.title(self.app_name)
