@@ -12,3 +12,6 @@ def load_house_data():
 def load_inherited_houses_data():
     inherited_df = pd.read_csv("outputs/datasets/collection/inherited_houses.csv")
     return inherited_df
+
+def load_pkl_file(file_path):
+    return joblib.load(filename=file_path)
