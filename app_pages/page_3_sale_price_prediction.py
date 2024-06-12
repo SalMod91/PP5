@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from datetime import date
-from src.data_management import load_pkl_file, load_house_data
+from src.data_management import load_pkl_file, load_house_data, load_inherited_houses_data
 from src.machine_learning.predictive_analysis_ui import predict_sale_price
 
 def page_3_sale_price_prediction_body():
@@ -45,6 +45,26 @@ def page_3_sale_price_prediction_body():
         st.write(f"Estimated Sale Price: **${prediction:,}**")
     
     st.write("---")
+
+    st.write("## Inherited Houses Prediction")
+
+    inherited_df = load_inherited_houses_data()
+    inherited_df = inherited_df.filter(sale_price_features)
+
+    st.dataframe(inherited_df)
+
+    if st.button("Run Sale Price Analysis for Inherited Homes"):
+        # Initializing a variable to keep the total sale price
+        total_sale_price = 0
+
+        # Printing each prediction
+        for index, row in inherited_df.iterrows():
+            prediction = predict_sale_price(pd.DataFrame([row]), sale_price_features, sale_price_pipeline)
+            st.write(f"Property {index + 1}: Estimated Sale Price = ${prediction:,}")
+            total_sale_price += prediction
+
+        # Printing the sum of all predicted prices
+        st.write(f"### Total Estimated Sale Price of Inherited Properties: **${total_sale_price:,}**")
 
 def DrawInputsWidgets():
     """
