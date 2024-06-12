@@ -29,7 +29,7 @@ def page_2_sale_price_study_body():
     st.write("## Sale Price Study")
 
     # Business requirements information
-    st.info(
+    st.success(
         f"#### Business Requirement 1\n\n"
         f"* The client is interested in discovering how the house attributes correlate "
         f"with the **Sale Price**. Therefore, the client expects data visualizations"
