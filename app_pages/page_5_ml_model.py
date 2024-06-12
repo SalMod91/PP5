@@ -53,6 +53,6 @@ def page_5_ml_model_body():
 
     st.write("### Regression Evaluation")
     # Spinner to indicate that the computation requires time
-    with st.spinner('Generating Plots...'):
+    with st.spinner("Generating Plots..."):
         # Generate and display plots for regression evaluation
         regression_evaluation_plots(X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test, pipeline=sale_price_pipeline, alpha_scatter=0.5)

@@ -163,9 +163,9 @@ def page_2_sale_price_study_body():
 
     # Checkbox to view Pearson correlation
     if st.checkbox("Pearson Correlation"):
-        calculate_corr_pearson(df)
-        plot_correlation_bar(df, method="pearson")
-
+        with st.spinner("Calculating Pearson Correlation..."):
+            calculate_corr_pearson(df)
+            plot_correlation_bar(df, method="pearson")
     st.write("---")
 
     # Spearman correlation explanation and visualization
@@ -187,8 +187,9 @@ def page_2_sale_price_study_body():
 
     # Checkbox to view Spearman correlation
     if st.checkbox("Spearman Correlation"):
-        calculate_corr_spearman(df)
-        plot_correlation_bar(df, method="spearman")
+        with st.spinner("Calculating Spearman Correlation..."):
+            calculate_corr_spearman(df)
+            plot_correlation_bar(df, method="spearman")
     
     st.write("---")
 
@@ -218,7 +219,8 @@ def page_2_sale_price_study_body():
 
     # Checkbox to view PPS
     if st.checkbox("PPS"):
-        calculate_pps(df)
+        with st.spinner("Calculating PPS..."):
+            calculate_pps(df)
 
     st.write("---")
 
@@ -242,7 +244,8 @@ def page_2_sale_price_study_body():
     )
 
     if st.checkbox("Bivariate Analysis"):
-        plot_regression(df, variables_to_study)
+        with st.spinner("Generating Plots..."):
+            plot_regression(df, variables_to_study)
 
 
 # Section for functions
