@@ -3,6 +3,75 @@
 ## Business Overview
 The primary objective of this project is to develop a data-driven web application that enables the client to accurately predict house sale prices based on various house attributes and provides insightful visualizations of how these attributes correlate with sale prices. This will aid the client in making informed decisions regarding the sale of four inherited properties and any future real estate investments in Ames, Iowa.
 
+## CRISP-DM
+### What is CRISP-DM?
+
+CRISP-DM, which stands for Cross-Industry Standard Process for Data Mining, is a widely adopted methodology for data mining projects. It provides a structured approach to planning and executing data mining tasks.
+
+The CRISP-DM framework consists of six phases:
+
+1. **Business Understanding**: This initial phase focuses on understanding the project objectives and requirements from a business perspective, then converting this knowledge into a data mining problem definition and a preliminary plan.
+
+2. **Data Understanding**: This phase starts with data collection and proceeds with activities aimed at familiarizing with the data, identifying data quality issues and discovering initial insights.
+
+3. **Data Preparation**: The data is prepared for modeling by performing tasks such as data cleaning and formatting data as necessary.
+
+4. **Modeling**: Various modeling techniques are selected and applied. During this phase, models are calibrated to optimal parameter settings and tested to ensure they are appropriate for the data.
+
+5. **Evaluation**: The model or models are thoroughly evaluated and reviewed to ensure they effectively meet the initial business objectives set out in the first phase.
+
+6. **Deployment**: The completion of the process involves deploying the data mining solution to the business.
+
+### CRISP-DM Workflow
+The development followed the Cross Industry Standard Process for Data Mining (CRISP-DM), organized into distinct phases and can be found [HERE](https://github.com/SalMod91/PP5-Heritage-Housing-Issue/issues?q=is%3Aissue+is%3Aopen):
+
+- **Epic 1: Business Understanding**:
+    
+    This stage involved extensive discussions with the client to understand their expectations and develop acceptance criteria, which are detailed in the [Business Requirements](#business-requirements) section below.
+
+- **Epic 2: Data Understanding**: 
+    
+    This stage was dedicated to conducting an exploratory study to identify the factors influencing the sale price, using raw data to avoid introducing biases through premature data preparation.
+    
+    This approach was chosen to ensure that the insights derived from the unaltered data were genuine and reflective of the true dynamics present in the dataset.
+    
+    This phase directly addresses and fulfills the first business requirement, as detailed in the [Business Requirements](#business-requirements), which was performed in the Sale Price Study Notebook.
+
+- **Epic 3: Data Preparation**:
+
+    This critical step involved cleaning and imputing data, conducting feature engineering like transformations or scaling, and reformatting data as needed.
+    
+    These tasks  were performed in the Data Cleaning and Feature Engineering Notebooks.
+
+- **Epic 4: Modeling**:
+
+    This phase focused on selecting modeling algorithms and splitting the data into training and testing sets.
+    
+    The training set was used to validate various algorithms and tune them through hyperparameter optimization and was performed in the Modeling and Evaluation Notebook.
+
+- **Epic 5: Evaluation**:
+
+    The test set was used to evaluate model performance, ensuring alignment with the business acceptance criteria.
+
+    The evaluation was performed in the Modeling and Evaluation Notebook.
+
+- **Epic 6: Deployment**:
+
+    A Streamlit app was developed to meet the business requirements established with the client.
+    
+    The app was deployed on Heroku, with the process described in the [Deployment](#deployment) section.
+
+### Agile Development
+To effectively manage the CRISP-DM workflow for my project, I've adopted Agile development practices, as they are both iterative and flexible frameworks that can effectively complement each other.
+
+I've aligned each stage of the CRISP-DM process with an Agile epic, breaking down the complex tasks into manageable user stories.
+
+This structure has enabled me to adaptively add tasks as the project evolved.
+
+Link to Epics: [Epics](https://github.com/SalMod91/PP5-Heritage-Housing-Issue/issues?q=is%3Aissue+is%3Aopen)
+
+Link to Kanban Board: [User Stories](https://github.com/users/SalMod91/projects/8)
+
 ## Business Requirements
 
 - Data Visualization Requirement: <br>
@@ -53,69 +122,120 @@ The primary objective of this project is to develop a data-driven web applicatio
 |YearRemodAdd|Remodel date (same as construction date if no remodelling or additions)|1950 - 2010|
 |SalePrice|Sale Price|34900 - 755000|
 
-## Business Requirements
-
-As a good friend, you are requested by your friend, who has received an inheritance from a deceased great-grandfather located in Ames, Iowa, to  help in maximising the sales price for the inherited properties.
-
-Although your friend has an excellent understanding of property prices in her own state and residential area, she fears that basing her estimates for property worth on her current knowledge might lead to inaccurate appraisals. What makes a house desirable and valuable where she comes from might not be the same in Ames, Iowa. She found a public dataset with house prices for Ames, Iowa, and will provide you with that.
-
-* 1 - The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualisations of the correlated variables against the sale price to show that.
-* 2 - The client is interested in predicting the house sale price from her four inherited houses and any other house in Ames, Iowa.
 
 ## Hypothesis and how to validate?
 
-* List here your project hypothesis(es) and how you envision validating it (them).
+1. **Hypothesis**: There is a positive correlation between the size-related features of a property and its sale price.
+    - **Validation Method**: Conduct a correlation analysis to determine the strength and direction of the relationship between property size features and sale prices.
 
-## The rationale to map the business requirements to the Data Visualisations and ML tasks
+2. **Hypothesis**: The year a property was built is positively correlated with its sale price.
+    - **Validation Method**: Perform a correlation analysis to assess the relationship between the year of construction and the sale price of properties.
 
-* List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.
+3. **Hypothesis**: Based on the identified features, it is possible to predict sale prices with an accuracy yielding an R² score of at least 0.75.
+    - **Validation Method**: Develop a regression model using the identified features to predict property sale prices. Validate the model by calculating the R² score on a test dataset to ensure the prediction accuracy meets or exceeds 0.75.
+
+## Mapping the business requirements to the Data Visualisations and ML tasks
+
+### Business Requirement 1: Correlation Study and Data Visualization
+
+- **Objective**: To analyze the data related to house sales to uncover how various house attributes correlate with the sale price.
+
+- **Tasks**:
+
+    - **Data Inspection**: Review and inspect the dataset containing house records to ensure a comprehensive understanding of the available data.
+
+    - **Correlation Analysis**: Perform both Pearson and Spearman correlation studies to identify the relationships between various variables and the sale price.
+
+    - **Data Visualization**: Create visual plots of key variables against the sale price to derive actionable insights and visually represent how house attributes impact sale prices.
+
+- **User Stories**:
+
+    - As a client, I want to review the data related to house records to explore how the house attributes influence the sale price.
+
+    - As a client, I want to visually map the main variables against the sale price to better understand and visualize the impact of different attributes on house pricing.
+
+### Business Requirement 2: Predictive Modeling and Performance Evaluation
+
+- **Objective**: To develop predictive models that accurately estimate house values and evaluate their performance.
+
+- **Tasks**:
+    - **Model Development**: Construct a regression model to predict the sale price as the dependent variable.
+    - **Visualization**: Create visual representations to compare the predictions of the train and test sets against actual sale prices.
+    - **Model Evaluation**: Conduct regression analysis to determine the R² Score and Mean Absolute Error, ensuring the model's accuracy and reliability.
+
+- **User Stories**:
+    - As a client, I want to predict the sale price of my four inherited properties using a machine learning model.
+    - As a client, I want the flexibility of predicting the sale price of any other home in Ames, Iowa.
 
 ## ML Business Case
 
-* In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
+### Machine Learning Model Development for Predicting House Sale Prices
+
+**Project Objective**:
+
+
+This project aims to develop a machine learning (ML) model to predict the sale price, in dollars, of homes in Ames, Iowa. The target variable is a continuous number, indicating the sale price. The focus is on a regression model, which is supervised and uni-dimensional, to offer a robust tool for predicting the sale prices of homes, particularly for a client's inherited properties.
+
+**Success Criteria**:
+
+- **Correlation Study**: Deliver a comprehensive analysis identifying key variables that significantly correlate with the sale price. This study will help in understanding which features impact the sale price most.
+
+- **Predictive Accuracy**: Develop a regression model capable of predicting the sale price with high reliability. The model should achieve an R² score of at least 0.75 on both training and testing datasets, ensuring it can accurately predict the sale prices of the four specific inherited properties and other homes in the region.
+
+**Model Selection**:
+
+- Based on the characteristics of the data and the nature of the target variable (sale price), a regression model is suggested.
+
+Client Benefits:
+
+- **Maximizing Investment Returns**: By accurately predicting the sale prices, the client can make informed decisions regarding when and at what price to sell the inherited properties, potentially maximizing their investment returns.
+    
+- **Strategic Planning**: Reliable sale price predictions will aid the client in strategic planning and management of property assets.
+
+**Model Inputs and Outputs**:
+
+- **Inputs**: The model will utilize a range of house attributes such as size, age and conditions inputs to predict the sale price.
+
+- **Outputs**: The primary output from the model will be the predicted sale price of a home as a continous value in dollars.
 
 ## Dashboard Design
 
 ### Dashboard Expectations
-The dashboard should contain:
+**Dashboard Overview**:
 
-- A project summary page, showing the project dataset summary and the client's requirements.
-- A page listing findings related to which features have the strongest correlation to the house sale price.
-- A page displaying the 4 houses attributes and their respective predicted sale price.
-- It should display a message informing the summed predicted price for all 4 inherited houses.
-- It should have an interactive input widget that allows a user to provide real-time house data to predict the sale price.
-- A page indicating the project hypothesis(es) and how i validated it across the project.
-- A technical page displaying the model's performance.
+The dashboard will serve as a multifunctional platform, presenting detailed insights, predictions, and analyses related to house sale prices. It will include the following key pages:
 
 ### Page 1: Project summary
 
-**Quick project summary**:
-- Project Terms and Jargon
-- Describe Project Dataset
-- State Business Requirements
+- **Overview**: Provide a concise summary of the project.
+- **Project Terms and Jargon**: Define specific terminology used throughout the project.
+- **Dataset Prescription**: Outline the characteristics and scope of the project dataset.
+- **Business Requirements**: Detail the client's needs and expectations from the project.
 
 ### Page 2: Sale Price Study
 
-- This page will answer business requirement 1
-- Display the most correlated variables to Sale Price
-- Explain correlation study
-- Visualize Data
+- **Purpose**: Address Business Requirement 1 by identifying and displaying key features that strongly correlate with house sale prices.
+- **Correlation Analysis**: Discuss the methodologies used for the correlation study and their findings.
+- **Data Visualization**: Offer visual representations of the data to highlight significant correlations.
 
-### Page 3: Sale Price Prediction
-- This page will answer business requirement 2
-- Display the predicted Price of all 4 inherited houses
-- Widget to input real life data and predict sale price
+### Page 3: Sale Price Predictions
+- **Objective**: Fulfill Business Requirement 2 by showcasing predictions for the four inherited properties.
+- **Prediction Display**: List the attributes of the four properties along with their predicted sale prices.
+- **Real-Time Prediction Widget**: Include an interactive input widget that allows users to input real-time data to receive instant sale price predictions.
 
-### Page 4: Project Hypothesis and Validation
+### Page 4: Hypothesis Testing and Validation
+- **List of Hypotheses**: Enumerate the project hypotheses.
+- **Validation Process**: Explain how each hypothesis was tested and validated throughout the project.
 
-### Page 5: Machine Learning Model
-- Overview of the machine learning pipeline implemented for model training
-- Details on the significance of various features within the model
-- Analysis of the pipeline’s performance
+### Page 5: Machine Learning Model Analysis
+- **Model Overview**: Describe the machine learning pipeline used for training the model.
+- **Feature Significance**: Discuss the importance of various features within the model.
+- **Performance Analysis**: Provide an evaluation of the model’s performance, including metrics and insights.
 
 ## Unfixed Bugs
 
-* You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not valid reason to leave bugs unfixed.
+- Some logs are showing warnings related to the use of deprecated versions of libraries or methods.
+- When navigating between pages in the Streamlit dashboard, the state of checkboxes does not reset as expected.
 
 ## Deployment
 
