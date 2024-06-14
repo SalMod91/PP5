@@ -1,7 +1,37 @@
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Heritage Housing Issues
+
+![Responsive Screenshot](/media/responsive.png)
+
+The live link to the App can be found [Here](https://housing-sale-price-predictor-3fd3a72156e8.herokuapp.com/)
 
 ## Business Overview
 The primary objective of this project is to develop a data-driven web application that enables the client to accurately predict house sale prices based on various house attributes and provides insightful visualizations of how these attributes correlate with sale prices. This will aid the client in making informed decisions regarding the sale of four inherited properties and any future real estate investments in Ames, Iowa.
+
+## Content Table
+- [Business Overview](#business-overview)
+- [CRISP-DM](#crisp-dm)
+    - [CRISP-DM Workflow](#crisp-dm-workflow)
+    - [Agile Development](#agile-development)
+- [Business Requirements](#business-requirements)
+- [Dataset Content](#dataset-content)
+- [Hypothesis and Validation](#hypothesis-and-how-to-validate)
+- [Mapping the business requirements to the Data Visualisations and ML tasks](#mapping-the-business-requirements-to-the-data-visualisations-and-ml-tasks)
+- [ML Business Case](#ml-business-case)
+- [Dashboard Design](#dashboard-design)
+    - [Page 1: Project Summary](#page-1-project-summary)
+    - [Page 2: Sale Price Study](#page-2-sale-price-study)
+    - [Page 3: Sale Price Prediction](#page-3-sale-price-predictions)
+    - [Page 4: Hypothesis and Validation](#hypothesis-and-validation)
+    - [Page 5: Machine Learning Model](#page-5-machine-learning-model)
+- [Unfixed Bugs](#unfixed-bugs)
+- [Testing](#testing)
+  - [Manual Testing](#manual-testing)
+  - [PEP 8 Compliance Testing](#pep8-compliance-testing)
+- [Deployment](#deployment)
+- [Technologies Used](#technologies-used)
+  - [Development and Deployment](#development-and-deployment)
+  - [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
+- [Credits](#credits)
 
 ## CRISP-DM
 ### What is CRISP-DM?
@@ -123,7 +153,7 @@ Link to Kanban Board: [User Stories](https://github.com/users/SalMod91/projects/
 |SalePrice|Sale Price|34900 - 755000|
 
 
-## Hypothesis and how to validate?
+## Hypothesis and Validation
 
 1. **Hypothesis**: There is a positive correlation between the size-related features of a property and its sale price.
     - **Validation Method**: Conduct a correlation analysis to determine the strength and direction of the relationship between property size features and sale prices.
@@ -305,7 +335,7 @@ The dashboard will serve as a multifunctional platform, presenting detailed insi
 - Hypothesis Page Screenshot:
     ![Hypothesis Page Screenshot](/media/hypothesis_page.png)
 
-### Page 5: Machine Learning Model Analysis
+### Page 5: Machine Learning Model
 - **Model Overview**: Describe the machine learning pipeline used for training the model.
 - **Feature Significance**: Discuss the importance of various features within the model.
 - **Performance Analysis**: Provide an evaluation of the model’s performance, including metrics and insights.
@@ -411,22 +441,20 @@ Ultimately, no other errors were found.
 
 ## Credits
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism.
-* You can break the credits section up into Content and Media, depending on what you have included in your project.
+The development of this project extensively utilized resources and methodologies from the **CI Churnometer Walkthrough Project** and **CI course content**. These resources provided a foundational framework and code for various functions and classes that were integral during the project's creation. Key components sourced include:
 
-### Content
+- **Hyperparameter Optimization Search**: Techniques for optimizing model parameters to enhance performance.
+- **Feature Importance Analysis**: Methods to assess and rank the influence of different features on model predictions.
+- **Evaluation of Train and Test Sets**: Processes to evaluate model performance across training and testing datasets to ensure generalizability.
+- **PPS and Correlation Analysis**: Tools for analyzing predictive power and relationships between variables.
+- **Missing Data Evaluation**: Strategies to assess and handle missing data within the dataset.
+- **Data Cleaning Effect**: Approaches to measure and improve the impact of data cleaning on model accuracy.
+- **Streamlit**: Inspiration from the CI Churnometer Walkthrough helped in utilizing Streamlit for creating the app pages and the prediction widget.
+- **Predictive Analytics Course**: Helped shape the analysis and modeling methods used in this project.
 
-* The text for the Home page was taken from Wikipedia Article A
-* Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-* The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+These components were employed within the Jupyter Notebooks throughout the project's lifecycle to ensure robust development and analysis.
 
-### Media
+README file content has been inspired from [Van-essa](https://github.com/van-essa/heritage-housing-issues/blob/main/README.md) and [Vasi](https://github.com/Vasi012/PP5-Predictive-Analysis/blob/main/README.md)
 
-* The photos used on the home and sign-up page are from This Open Source site
-* The images used for the gallery page were taken from this other open-source site
-
-## Acknowledgements (optional)
-
-
-* In case you would like to thank the people that provided support through this project.
+My mentor, Marcel, guiding me through this project.
 
