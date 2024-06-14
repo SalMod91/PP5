@@ -212,6 +212,10 @@ The dashboard will serve as a multifunctional platform, presenting detailed insi
 - **Dataset Prescription**: Outline the characteristics and scope of the project dataset.
 - **Business Requirements**: Detail the client's needs and expectations from the project.
 
+<details>
+<summary>Project Summary Page Screenshots</summary>
+</details>
+
 ### Page 2: Sale Price Study
 
 - **Purpose**: Address Business Requirement 1 by identifying and displaying key features that strongly correlate with house sale prices.

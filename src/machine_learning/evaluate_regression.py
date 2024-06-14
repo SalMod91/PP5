@@ -12,8 +12,6 @@ def regression_performance(X_train, y_train, X_test, y_test, pipeline):
     Display regression model performance metrics for
     both training and test datasets.
     """
-    st.write("## Model Evaluation")
-
     st.write("### Train Set")
     regression_evaluation(X_train, y_train, pipeline)
 
