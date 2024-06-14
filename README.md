@@ -348,12 +348,28 @@ The dashboard will serve as a multifunctional platform, presenting detailed insi
 - Some logs are showing warnings related to the use of deprecated versions of libraries or methods.
 - When navigating between pages in the Streamlit dashboard, the state of checkboxes does not reset as expected.
 
+## Testing
+
+### Manual Testing
+
+The deployed app and notebooks have been extensively tested to guarantee that data visualizations appear correctly and sale price predictions function accurately.
+
+### PEP8 Compliance Testing
+
+All Python files were checked using the [CI Python Linter](https://pep8ci.herokuapp.com/).
+
+Minor issues like long lines and trailing whitespace were corrected. 
+
+Notably, one line in the page_1_summary.py, specifically line 65, exceeds 79 characters due to containing a GitHub link, which cannot be split.
+
+Ultimately, no other errors were found.
+
 ## Deployment
 
 ### Heroku
 
-* The App live link is: <https://YOUR_APP_NAME.herokuapp.com/>
-* Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
+* The App live link is: <https://housing-sale-price-predictor-3fd3a72156e8.herokuapp.com/>
+* Set the runtime.txt Python version to a [Heroku-22](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
 * The project was deployed to Heroku using the following steps.
 
 1. Log in to Heroku and create an App
@@ -363,7 +379,7 @@ The dashboard will serve as a multifunctional platform, presenting detailed insi
 5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
 6. If the slug size is too large then add large files not required for the app to the .slugignore file.
 
-## Main Data Analysis and Machine Learning Libraries
+## Technologies Used
 
 * Here you should list the libraries you used in the project and provide example(s) of how you used these libraries.
 
