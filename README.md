@@ -5,7 +5,9 @@
 The live link to the App can be found [Here](https://housing-sale-price-predictor-3fd3a72156e8.herokuapp.com/)
 
 ## Business Overview
-The primary objective of this project is to develop a data-driven web application that enables the client to accurately predict house sale prices based on various house attributes and provides insightful visualizations of how these attributes correlate with sale prices. This will aid the client in making informed decisions regarding the sale of four inherited properties and any future real estate investments in Ames, Iowa.
+The primary objective of this project is to develop a data-driven web application that enables the client to accurately predict house sale prices based on various house attributes and provides insightful visualizations of how these attributes correlate with sale prices.
+
+This will aid the client in making informed decisions regarding the sale of four inherited properties and any future real estate investments in Ames, Iowa.
 
 ## Content Table
 - [Business Overview](#business-overview)
@@ -32,6 +34,7 @@ The primary objective of this project is to develop a data-driven web applicatio
   - [Development and Deployment](#development-and-deployment)
   - [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
 - [Credits](#credits)
+
 
 ## CRISP-DM
 ### What is CRISP-DM?
