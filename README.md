@@ -26,11 +26,11 @@ The CRISP-DM framework consists of six phases:
 The development followed the Cross Industry Standard Process for Data Mining (CRISP-DM), organized into distinct phases and can be found [HERE](https://github.com/SalMod91/PP5-Heritage-Housing-Issue/issues?q=is%3Aissue+is%3Aopen):
 
 - **Epic 1: Business Understanding**:
-    
+
     This stage involved extensive discussions with the client to understand their expectations and develop acceptance criteria, which are detailed in the [Business Requirements](#business-requirements) section below.
 
 - **Epic 2: Data Understanding**: 
-    
+
     This stage was dedicated to conducting an exploratory study to identify the factors influencing the sale price, using raw data to avoid introducing biases through premature data preparation.
     
     This approach was chosen to ensure that the insights derived from the unaltered data were genuine and reflective of the true dynamics present in the dataset.
