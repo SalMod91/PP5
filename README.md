@@ -212,9 +212,11 @@ The dashboard will serve as a multifunctional platform, presenting detailed insi
 - **Dataset Prescription**: Outline the characteristics and scope of the project dataset.
 - **Business Requirements**: Detail the client's needs and expectations from the project.
 
-<details>
-<summary>Project Summary Page Screenshots</summary>
-</details>
+![Screenshot 1 Summary Page](/media/page_summary_1.png)
+
+![Screenshot 2 Summary Page](/media/page_summary_2.png)
+
+
 
 ### Page 2: Sale Price Study
 
@@ -222,19 +224,124 @@ The dashboard will serve as a multifunctional platform, presenting detailed insi
 - **Correlation Analysis**: Discuss the methodologies used for the correlation study and their findings.
 - **Data Visualization**: Offer visual representations of the data to highlight significant correlations.
 
+- Sale Price Study Page Screenshots:
+    - Displays the business requirement and includes a checkbox for dataset inspection.
+    
+    ![Screenshot Sale Price Study Page](/media/sale_price_1.png)
+
+
+    - Introduces the summary of the correlation study.
+    - Indicates that there are visual aids to help explain how conclusions were reached.
+    - A yellow warning message alerts users to potential waiting times due to computing demands.
+
+    ![Screenshot Correlation Sale Price Study Page](/media/sale_price_2.png)
+
+- Pearson Correlation Study
+    - Briefly introduces the Pearson correlation study.
+    - Activating the checkbox reveals the heatmap visualization of the correlation study.
+    - Includes a barplot for easier understanding by non-technical users.
+
+    ![Screenshot Pearson Correlation Sale Price Study Page](/media/sale_price_pearson.png)
+
+    ![Screenshot Pearson Correlation Heatmap Sale Price Study Page](/media/sale_price_pearson_heatmap.png)
+
+    ![Screenshot Pearson Correlation Barplot Sale Price Study Page](/media/sale_price_pearson_bar.png)
+
+- Spearman Correlation Study
+    - Briefly introduces the Spearman correlation study.
+    - Activating the checkbox reveals the heatmap visualization of the correlation study.
+    - Includes a barplot for easier understanding by non-technical users.
+
+    ![Screenshot Spearman Correlation Sale Price Study Page](/media/sale_price_spearman.png)
+
+    ![Screenshot Spearman Correlation Heatmap Sale Price Study Page](/media/sale_price_spearman_heatmap.png)
+
+    ![Screenshot Spearman Correlation Barplot Sale Price Study Page](/media/sale_price_spearman_bar.png)
+- PPS Study
+    - Provides an overview of the PPS (Predictive Power Score) study.
+    - Ticking the checkbox displays the heatmap visualization of the PPS study.
+
+    ![Screenshot PPS Sale Price Study Page](/media/sale_price_pps.png)
+
+    ![Screenshot PPS Heatmap Sale Price Study Page](/media/sale_price_pps_heatmap.png)
+
+- Bivariate Analysis
+    - Introduces the concept of Bivariate Analysis.
+    - Enables the generation of regression plots for features strongly correlated with sale price upon selection.
+
+    ![Screenshot Bivariate Sale Price Study Page](/media/sale_price_bivariate.png)
+
+    ![Screenshot Bivariate Plots Sale Price Study Page](/media/sale_price_bivariate_plots.png)
+
+
 ### Page 3: Sale Price Predictions
 - **Objective**: Fulfill Business Requirement 2 by showcasing predictions for the four inherited properties.
 - **Prediction Display**: List the attributes of the four properties along with their predicted sale prices.
 - **Real-Time Prediction Widget**: Include an interactive input widget that allows users to input real-time data to receive instant sale price predictions.
 
+- Sale Price Predictor Screenshots:
+    - Introduces the user to the second business requirement.
+    - Explains that the features available for input through widgets have been identified by the model as the most effective for predicting sale prices.
+
+    ![Screenshot Predictor](/media/sale_price_prediction.png)
+
+- Prediction Widget
+    - Allows users to enter their home data to receive a predicted sale price.
+    - By clicking the "Run Predictive Analysis" button, the model calculates and displays the predicted sale price.
+
+    ![Screenshot Widget](/media/sale_price_prediction_any.png)
+
+- Prediction Inherited Widget
+    - As specified in Business Requirement 2, predicts the sale prices of the four inherited houses.
+    - Shows a loaded dataframe with relevant features for each inherited property.
+    - Upon pressing the "Run Analysis" button, displays predicted prices for each property and also calculates the total value of all properties.
+    
+    ![Screenshot Inherited](/media/sale_price_prediction_inherited.png)
+
 ### Page 4: Hypothesis Testing and Validation
 - **List of Hypotheses**: Enumerate the project hypotheses.
 - **Validation Process**: Explain how each hypothesis was tested and validated throughout the project.
+
+- Hypothesis Page Screenshot:
+    ![Hypothesis Page Screenshot](/media/hypothesis_page.png)
 
 ### Page 5: Machine Learning Model Analysis
 - **Model Overview**: Describe the machine learning pipeline used for training the model.
 - **Feature Significance**: Discuss the importance of various features within the model.
 - **Performance Analysis**: Provide an evaluation of the model’s performance, including metrics and insights.
+
+- Machine Learning Model Screenshots:
+    - Introduces the user to the details of the machine learning model.
+    - Describes the process of preparing the data before it enters the model.
+    - Outlines the pipeline used in the model
+
+    ![Machine Learning Model Screenshot](/media/machine_model_page.png)
+
+- Features importance
+    - Introduces the most critical features that influence the model.
+    - Clarifies why these features are vital and explains the significance of their values in the context of model predictions.
+
+    ![Machine Learning Features](/media/machine_model_features.png)
+
+    - Displays a visual representation, in the form of a barplot, highlighting the features that have the greatest impact on the model’s predictions.
+
+    ![Machine Learning Features Importance](/media/machine_model_features_importance.png)
+
+- Model Evaluation
+    - Provides an overview of how the model's performance is assessed.
+    - Describes the significance of each metric used in the evaluation, helping users understand what these numbers mean.
+
+    ![Machine Learning Evaluation](/media/machine_model_evaluation.png)
+
+    - The user gets introduced to the evaluation plot and metric scores
+
+    ![Machine Learning Evaluation Plot](/media/machine_model_evaluation_plot.png)
+
+- Conclusions
+    - Presents a summary of the machine learning model's performance, reviewing key results.
+    - Each metric and outcome is clearly explained, providing insight into what the results signify for the model's effectiveness and areas for improvement.
+
+    ![Machine Learning Conclusions](/media/machine_model_conclusions.png)
 
 ## Unfixed Bugs
 
