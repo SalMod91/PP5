@@ -381,7 +381,33 @@ Ultimately, no other errors were found.
 
 ## Technologies Used
 
-* Here you should list the libraries you used in the project and provide example(s) of how you used these libraries.
+### Development and Deployment
+
+| **Tool**          | **Description**                                                                                                          |
+|-------------------|--------------------------------------------------------------------------------------------------------------------------|
+| **GitHub**        | A web-based platform for version control and collaboration, used to host and manage the project's repository.            |
+| **Gitpod**        | A cloud-based integrated development environment (IDE) that facilitated the creation of this project.                     |
+| **Jupyter Notebooks** | Interactive computing environments that enable users to create and share documents with code, visualizations, and text. They were extensively utilized for data analysis, as well as the development and evaluation of the machine learning pipeline in this project. |
+| **Kaggle**        | An online community and platform for open-source data, which served as the primary data source for this project.           |
+| **Heroku**        | A cloud platform service that supports several programming languages and is used to deploy, manage, and scale modern apps. |
+| **Streamlit**     | An open-source app framework for Machine Learning and Data Science projects, used to quickly create and share data apps. |
+| **Python**        | A high-level programming language known for its readability and flexibility, used extensively for all programming tasks in this project including data manipulation, analysis, and machine learning model development. |
+
+
+
+### Main Data Analysis and Machine Learning Libraries
+
+| **Library/Tool** | **Usage Description**                                                                                                                      |
+|:-----------------|:-------------------------------------------------------------------------------------------------------------------------------------------|
+| **NumPy** | Employed for mathematical operations such as calculating means, modes, and standard deviations.                                                   |
+| **Pandas** | Used for reading and writing data files, as well as inspecting, creating, and manipulating series and dataframes.                                |
+| **Pandas Profiling** | Utilized to generate comprehensive Profile Reports of the dataset, providing detailed data analysis.                                   |
+| **PPScore** | Applied to determine the predictive power score of data features, assessing their predictive relationship.                                      |
+| **Matplotlib & Seaborn** | Used for creating plots to visualize data analysis, including heatmaps, correlation plots, and histograms of feature importance.   |
+| **Feature Engine** | Deployed for various data cleaning and preparation tasks such as dropping features, imputing missing variables, ordinal encoding, numerical transformations, outlier assessment, and smart correlation assessments.                                                                                         |
+| **Scikit-Learn** | Central to numerous machine learning tasks, including splitting train and test sets, feature processing and selection, grid search for optimal regression models and hyperparameters, model evaluation using R2 score, and Principal Component Analysis.                                                                  |
+| **XGBoost** | Used specifically for the XGBoostRegressor algorithm, enhancing the predictive modeling process.                                                |
+
 
 ## Credits
 
